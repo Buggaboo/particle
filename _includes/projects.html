@@ -6,14 +6,12 @@
 {% for portfolio in site.portfolio %}
 <div class="user-projects">
   <div class="images-right">
-    <img alt="mountains" src="{{ "/assets/img/mountains.jpg" | prepend: site.baseurl }}" />
+    <img alt="{{ portfolio.imagealt }}" src="{{ portfolio.image | prepend: site.baseurl }}" />
   </div>
   <div class="contents">
     <h3> {{ portfolio.title }} </h3>
-    <ul>
-      <li> Featured Skills</li>
-    </ul>
     <p>{{ portfolio.excerpt }}</p>
+    <p style="color: grey">{{ portfolio.tools }}</p>
     <a class="project-link" href="{{ portfolio.url | prepend: site.baseurl }}">Check it out</a>
   </div>
 </div>
